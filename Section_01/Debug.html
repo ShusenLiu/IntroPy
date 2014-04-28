@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head><link rel="canonical" href="http://msdn.microsoft.com/en-us/library/system.diagnostics.debug(v=vs.110).aspx" />
+        <title>Debug Class (System.Diagnostics)</title>
+
+
+
+
+<meta name="DCS.dcsuri" content="/en-us/library/vstudio/6x31ezs1(d=default,l=en-us,v=vs.110).aspx" />
+
+<meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/library/vstudio/6x31ezs1(d=default,l=en-us,v=vs.110).aspx" />
+
+<meta name="ms.normalizedurl" content="http://msdn.microsoft.com/en-us/library/vstudio/6x31ezs1(d=default,l=en-us,v=vs.110).aspx" />
+
+<meta name="DCSext.ProductFamily" content="LIB_DG" />
+
+<meta name="DCSext.Product" content="NDP_CLR" />
+
+<meta name="DCSext.Title" content="Debug Class" />
+
+<meta name="VotingContextUrl" content="http://msdn.microsoft.com/en-us/library/vstudio/6x31ezs1(d=default,l=en-us,v=vs.110).aspx" />
+
+<meta name="MN" content="4B9B1F25-1:07:12 AM" />
+
+<meta name="Search.ShortId" content="6x31ezs1" />
+
+<meta name="ms.shortidmsdn" content="6x31ezs1" />
+
+<meta name="Ms.Locale" content="en-us" />
+
+
+
+
+
+
+
+
+        
+    
+    
+
+    <link rel="stylesheet" type="text/css" href="http://i3.msdn.microsoft.com/Combined.css?resources=0:Topic,0:CodeSnippet,0:ProgrammingSelector,0:ExpandableCollapsibleArea,1:CommunityContent,0:TopicNotInScope,0:FeedViewerBasic,0:ImageSprite,2:Vstudio,3:epxheader.4,3:sprite,1:Toc,1:NavigationResize,4:FeedbackCounter,0:VersionSelector,4:Feedback,1:LibraryMemberFilter,3:epxfooter.4;/Areas/Epx/Content/Css:0,/Areas/Library/Content:1,/Areas/Library/Themes/VStudio/Content:2,/Areas/Epx/Themes/VStudio/Content:3,/Areas/Epx/Shared/Content:4&amp;amp;hashKey=538EC1A2D7DA3C5D65FE7DA8D52E5B45" /></head>
+    <body class="library">
+        <div id="page">
+            
+            
+  
+            
+    
+
+
+
+
+
+
+<header class="ux-header">
+  <div class="header-top-bar">
+    <a class="header-top-bar-brand-logo" href="http://msdn.microsoft.com/vstudio" title="Visual Studio Home"></a>
+
+    <ul class="header-top-bar-links" id="ux-nav-user">
+      <li class="header-top-bar-search-box">
+        
+
+<form name="HeaderSearchForm" id="HeaderSearchForm" method="get" action="http://social.msdn.microsoft.com/search/en-us/">
+  <input type="text" id="HeaderSearchTextBox" name="query" title="Search Visual Studio" class="TextBoxSearch" />
+  <input type="hidden" id="RefinementId" name="refinement" title="195" value="195" />
+  <input type="submit" id="HeaderSearchButton" title="Search Visual Studio" class="header-search-button" value="" />
+  
+</form>
+      </li>
+
+
+
+      <li class="last">
+        <a class="scarabLink" id="idPPScarab" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=12&amp;ct=1398672433&amp;rver=6.0.5276.0&amp;wp=MCLBI&amp;wlcxt=msdn%24msdn%24msdn&amp;wreply=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2fvstudio%2fSystem.Diagnostics.Debug%2528v%3dvs.110%2529.aspx&amp;lc=1033&amp;id=254354&amp;mkt=en-US" title="Sign in">
+          <span id="idPPScarabSIT">Sign in</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="header-nav-container">
+  <nav class="header-nav">
+    <ul class="header-nav-pri">
+          <li><a href="http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx" title="Home">Home</a></li>
+          <li><a href="http://code.msdn.microsoft.com/vstudio" title="Samples">Samples</a></li>
+          <li><a href="http://msdn.microsoft.com/en-us/vstudio/jj672990.aspx" title="Languages">Languages</a></li>
+          <li><a href="http://visualstudiogallery.msdn.microsoft.com/" title="Extensions">Extensions</a></li>
+          <li class="header-nav-selected"><a href="http://msdn.microsoft.com/en-us/library/vstudio" title="Documentation">Documentation</a></li>
+          <li><a href="http://social.msdn.microsoft.com/forums/vstudio/en-us/home?category=visualstudio%2cvslanguages%2cvstfs%2cnetdevelopment%2cvsarch" title="Forums">Forums</a></li>
+
+    </ul>
+  
+      <ul class="header-nav-sec">
+            <li>
+                <a href="http://msdn.microsoft.com/en-us/library/vstudio/dd831853(v=vs.120).aspx" title="Visual Studio">Visual Studio</a>
+            </li>
+            <li>
+                <a href="http://msdn.microsoft.com/en-us/library/vstudio/fda2bad5(v=vs.120).aspx" title="Team Foundation Server ALM">Team Foundation Server ALM</a>
+            </li>
+            <li class="header-nav-selected">
+                <a href="http://msdn.microsoft.com/en-us/library/vstudio/w0x726c2.aspx" title=".NET Framework">.NET Framework</a>
+            </li>
+      </ul>
+  </nav>
+  
+    <div class="header-nav-trial">
+      <a href="http://go.microsoft.com/fwlink/?LinkId=309297&amp;clcid=0x409&amp;slcid=0x409" title="Get started for free" class="trialanchor">
+            <span class="trialtext">Get started for free</span>
+            <span class="trialimage"></span>
+        </a>
+    </div>
+  </div>
+</header>
+
+
+
+
+        
+            <div id="body">
+                
+
+
+
+
+
+
+    <div id="leftNav">
+
+
+
+<div id="tocnav">
+            <div class="toclevel0" data-toclevel="0">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/jj159353.aspx" id="jj159081_MSDN.10_en-us" mtpsaliasid="" mtpsassetid="a94d4841-3f89-438a-bead-d707357ad950_MSDN.10_en-us" mtpsshortid="jj159353_MSDN.10_en-us" title="Developer Tools and Languages">Developer Tools and Languages</a>            </div>
+            <div class="toclevel0" data-toclevel="0">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/w0x726c2(v=vs.110).aspx" id="aa139616_MSDN.10_en-us" mtpsaliasid="" mtpsassetid="f61f02f2-2f20-483d-8f56-a9c8f3a54986_MSDN.10_en-us" mtpsshortid="w0x726c2_VS.110_en-us" title=".NET Framework 4.5">.NET Framework 4.5</a>            </div>
+            <div class="toclevel0" data-toclevel="0">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/gg145045(v=vs.110).aspx" id="hh795167_VS.110_en-us" mtpsaliasid="" mtpsassetid="e18143ab-e34f-496a-9092-14147075f668_VS.110_en-us" mtpsshortid="gg145045_VS.110_en-us" title=".NET Framework Class Library">.NET Framework Class Library</a>            </div>
+            <div class="toclevel0" data-toclevel="0">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/gg145030(v=vs.110).aspx" id="hh798446_VS.110_en-us" mtpsaliasid="" mtpsassetid="79c5dfae-4e80-8e09-37ca-ef7f50751160_VS.110_en-us" mtpsshortid="gg145030_VS.110_en-us" title="System.Diagnostics Namespaces">System.Diagnostics Namespaces</a>            </div>
+            <div class="toclevel0" data-toclevel="0">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/System.Diagnostics(v=vs.110).aspx" id="gg400900_VS.110_en-us" mtpsaliasid="System.Diagnostics" mtpsassetid="N:System.Diagnostics_VS.110_en-us" mtpsshortid="15t15zda_VS.110_en-us" title="System.Diagnostics">System.Diagnostics</a>            </div>
+            <div class="toclevel1 current" data-toclevel="1">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.110).aspx" id="hh589673_VS.110_en-us" mtpsaliasid="System.Diagnostics.Debug" mtpsassetid="T:System.Diagnostics.Debug_VS.110_en-us" mtpsshortid="6x31ezs1_VS.110_en-us" title="Debug Class">Debug Class</a>            </div>
+            <div class="toclevel2" data-toclevel="2">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/system.diagnostics.debug_methods(v=vs.110).aspx" id="hh576515_VS.110_en-us" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Debug Methods">Debug Methods</a>            </div>
+            <div class="toclevel2" data-toclevel="2">
+<a data-tochassubtree="true" href="/en-us/library/vstudio/system.diagnostics.debug_properties(v=vs.110).aspx" id="hh636919_VS.110_en-us" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Debug Properties">Debug Properties</a>            </div>
+</div>
+        
+
+        
+
+        
+        
+        <div id="toc-resizable-ew" class="toc-resizable-ew"></div>
+        
+
+<a id="NavigationResize" href="javascript:void(0)">
+    <img class="cl_nav_resize_open" src="http://i3.msdn.microsoft.com/Areas/Epx/Content/Images/ImageSprite.png" title="Expand" alt="Expand" />
+    <img class="cl_nav_resize_close" src="http://i3.msdn.microsoft.com/Areas/Epx/Content/Images/ImageSprite.png" title="Minimize" alt="Minimize" />
+</a>
+
+
+
+    </div>
+<div id="content" class="content">
+
+
+
+
+
+
+    
+    
+
+    <div id="ratingCounterSeperator" class="cl_lw_vs_seperator" style="display: none;"></div>
+
+    <div id="ratingCounter">
+        <span id="rcA" class="ratingText">
+            1 out of 4 rated this helpful <span id="rateThisPrefix">- </span><a id="rateThisTopic" href="#feedback" title="Rate this topic">Rate this topic</a>
+            
+        </span>
+    </div>
+
+
+        
+<div xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="topic" xmlns="http://www.w3.org/1999/xhtml" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:cs="http://msdn.microsoft.com/en-us/">
+    <h1 class="title">Debug Class</h1>
+    
+    <div class="lw_vs">
+      <div id="curversion">
+        <strong>
+            .NET Framework 4.5
+        </strong>
+      </div>
+      <div id="versionclick">
+        <div id="vsseperator" class="cl_lw_vs_seperator"></div>
+        <div>
+          <div>
+            <a id="vsLink" href="javascript:;">
+                        Other Versions
+                    </a>
+          </div>
+          <div class="cl_vs_arrow clip10x10">
+            <img class="cl_lw_vs_arrow" id="vsArrow" alt="" src="http://i3.msdn.microsoft.com/Areas/Epx/Content/Images/ImageSprite.png" />
+          </div>
+        </div>
+        <ul id="vsPanel">
+          <li>
+            <a href="/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.100).aspx" title="">.NET Framework 4</a>
+          </li>
+          <li>
+            <a href="/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.90).aspx" title="">.NET Framework 3.5</a>
+          </li>
+          <li>
+            <a href="/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.85).aspx" title="">.NET Framework 3.0</a>
+          </li>
+          <li>
+            <a href="/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.80).aspx" title="">.NET Framework 2.0</a>
+          </li>
+          <li>
+            <a href="/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.71).aspx" title="">.NET Framework 1.1</a>
+          </li>
+          <li>
+            <a href="/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.95).aspx" title="">Silverlight </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    
+    <div id="mainSection">
+      <div id="mainBody">
+        <p>
+          
+        </p>
+        <div>
+          <div class="summary">
+            <p>Provides a set of methods and properties that help debug your code. This class cannot be inherited.</p>
+          </div>
+        </div>
+        <div>
+          
+          <div class="LW_CollapsibleArea_TitleDiv">
+            <div>
+              <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse">
+                <span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span>
+                <span class="LW_CollapsibleArea_Title">Inheritance Hierarchy</span>
+              </a>
+              <div class="LW_CollapsibleArea_HrDiv">
+                <hr class="LW_CollapsibleArea_Hr" />
+              </div>
+            </div>
+          </div>
+          <div class="sectionblock">
+            <a id="familyToggle">
+              
+            </a>
+            <a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object(v=vs.110).aspx">System<span xmlns="">.</span>Object</a>
+            <br />  <span class="selflink">System.Diagnostics<span xmlns="">.</span>Debug</span><br /></div>
+        </div>
+        <p>
+          
+        </p> <strong>Namespace:</strong> 
+   <a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics(v=vs.110).aspx">System.Diagnostics</a><br /> <strong>Assembly:</strong>
+   <span>System</span> (in System.dll)<div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Syntax</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="syntaxToggle"></a>
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabActive" dir="ltr"><a>C#</a></div><div class="codeSnippetContainerTab" dir="ltr"><a href="http://msdn.microsoft.com/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.110).aspx?cs-save-lang=1&amp;cs-lang=cpp#code-snippet-1">C++</a></div><div class="codeSnippetContainerTab" dir="ltr"><a href="http://msdn.microsoft.com/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.110).aspx?cs-save-lang=1&amp;cs-lang=fsharp#code-snippet-1">F#</a></div><div class="codeSnippetContainerTab" dir="ltr"><a href="http://msdn.microsoft.com/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.110).aspx?cs-save-lang=1&amp;cs-lang=vb#code-snippet-1">VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_36e25f39-409a-4c36-bda9-de05c08e767b');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_36e25f39-409a-4c36-bda9-de05c08e767b" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">public</span> <span style="color:Blue;">static</span> <span style="color:Blue;">class</span> Debug
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></div><p>The <span class="selflink">Debug</span> type exposes the following members.</p><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Properties</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="propertyTableToggle"></a><table id="memberList" class="members"><tr><th class="iconColumn">
+               
+            </th><th class="nameColumn">Name</th><th class="descriptionColumn">Description</th></tr><tr data="public;static;declared;xnafw;"><td><img id="pubproperty" alt="Public property" src="http://i.msdn.microsoft.com/dynimg/IC74937.gif" title="Public property" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.autoflush(v=vs.110).aspx">AutoFlush</a></td><td><span>Gets or sets a value indicating whether <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.flush(v=vs.110).aspx">Flush</a></span> should be called on the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> after every write.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubproperty" alt="Public property" src="http://i.msdn.microsoft.com/dynimg/IC74937.gif" title="Public property" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indentlevel(v=vs.110).aspx">IndentLevel</a></td><td><span>Gets or sets the indent level.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubproperty" alt="Public property" src="http://i.msdn.microsoft.com/dynimg/IC74937.gif" title="Public property" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indentsize(v=vs.110).aspx">IndentSize</a></td><td><span>Gets or sets the number of spaces in an indent.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubproperty" alt="Public property" src="http://i.msdn.microsoft.com/dynimg/IC74937.gif" title="Public property" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></td><td><span>Gets the collection of listeners that is monitoring the debug output.</span></td></tr></table><a href="#mainBody">Top</a></div></div><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Methods</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="methodTableToggle"></a><table id="memberList1" class="members"><tr><th class="iconColumn">
+               
+            </th><th class="nameColumn">Name</th><th class="descriptionColumn">Description</th></tr><tr data="public;static;declared;xnafw;portable_library;Windows_store_apps;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /><img id="PortableClassLibrary" alt="Supported by Portable Class Library" src="http://i.msdn.microsoft.com/dynimg/IC477625.png" title="Supported by Portable Class Library" xmlns="" /><img id="storebag" alt="Supported in .NET for Windows Store apps" src="http://i.msdn.microsoft.com/dynimg/IC628630.png" title="Supported in .NET for Windows Store apps" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/kssw4w7z(v=vs.110).aspx">Assert(Boolean)</a></td><td><span>Checks for a condition; if the condition is <span><span class="input">false</span></span>, displays a message box that shows the call stack.</span></td></tr><tr data="public;static;declared;xnafw;portable_library;Windows_store_apps;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /><img id="PortableClassLibrary" alt="Supported by Portable Class Library" src="http://i.msdn.microsoft.com/dynimg/IC477625.png" title="Supported by Portable Class Library" xmlns="" /><img id="storebag" alt="Supported in .NET for Windows Store apps" src="http://i.msdn.microsoft.com/dynimg/IC628630.png" title="Supported in .NET for Windows Store apps" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/e63efys0(v=vs.110).aspx">Assert(Boolean, String)</a></td><td><span>Checks for a condition; if the condition is <span><span class="input">false</span></span>, outputs a specified message and displays a message box that shows the call stack.</span></td></tr><tr data="public;static;declared;xnafw;portable_library;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /><img id="PortableClassLibrary" alt="Supported by Portable Class Library" src="http://i.msdn.microsoft.com/dynimg/IC477625.png" title="Supported by Portable Class Library" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/w3yhsfh0(v=vs.110).aspx">Assert(Boolean, String, String)</a></td><td><span>Checks for a condition; if the condition is <span><span class="input">false</span></span>, outputs two specified messages and displays a message box that shows the call stack.</span></td></tr><tr data="public;static;declared;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/cc190597(v=vs.110).aspx">Assert(Boolean, String, String, <span xmlns=""></span>Object<span xmlns="">[]</span>)</a></td><td><span>Checks for a condition; if the condition is <span><span class="input">false</span></span>, outputs two messages (simple and formatted) and displays a message box that shows the call stack.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.close(v=vs.110).aspx">Close</a></td><td><span>Flushes the output buffer and then calls the <span><span class="input">Close</span></span> method on each of the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span>.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/6z60kt1f(v=vs.110).aspx">Fail(String)</a></td><td><span>Emits the specified error message.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/30cceyc6(v=vs.110).aspx">Fail(String, String)</a></td><td><span>Emits an error message and a detailed error message.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.flush(v=vs.110).aspx">Flush</a></td><td><span>Flushes the output buffer and causes buffered data to write to the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indent(v=vs.110).aspx">Indent</a></td><td><span>Increases the current <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indentlevel(v=vs.110).aspx">IndentLevel</a></span> by one.</span></td></tr><tr data="public;static;declared;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/9azyssyh(v=vs.110).aspx">Print(String)</a></td><td><span>Writes a message followed by a line terminator to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/867tyd42(v=vs.110).aspx">Print(String, <span xmlns=""></span>Object<span xmlns="">[]</span>)</a></td><td><span>Writes a formatted string followed by a line terminator to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.unindent(v=vs.110).aspx">Unindent</a></td><td><span>Decreases the current <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indentlevel(v=vs.110).aspx">IndentLevel</a></span> by one.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/848f20dy(v=vs.110).aspx">Write(Object)</a></td><td><span>Writes the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/54ffa64k(v=vs.110).aspx">Write(String)</a></td><td><span>Writes a message to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/6zt44ast(v=vs.110).aspx">Write(Object, String)</a></td><td><span>Writes a category name and the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/a1z6t089(v=vs.110).aspx">Write(String, String)</a></td><td><span>Writes a category name and message to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/1a5wss6z(v=vs.110).aspx">WriteIf(Boolean, Object)</a></td><td><span>Writes the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/s12c0zts(v=vs.110).aspx">WriteIf(Boolean, String)</a></td><td><span>Writes a message to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/0y6k2bc9(v=vs.110).aspx">WriteIf(Boolean, Object, String)</a></td><td><span>Writes a category name and the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/t3atw5ad(v=vs.110).aspx">WriteIf(Boolean, String, String)</a></td><td><span>Writes a category name and message to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr><tr data="public;static;declared;xnafw;portable_library;Windows_store_apps;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /><img id="PortableClassLibrary" alt="Supported by Portable Class Library" src="http://i.msdn.microsoft.com/dynimg/IC477625.png" title="Supported by Portable Class Library" xmlns="" /><img id="storebag" alt="Supported in .NET for Windows Store apps" src="http://i.msdn.microsoft.com/dynimg/IC628630.png" title="Supported in .NET for Windows Store apps" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/7821bed5(v=vs.110).aspx">WriteLine(Object)</a></td><td><span>Writes the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;portable_library;Windows_store_apps;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /><img id="PortableClassLibrary" alt="Supported by Portable Class Library" src="http://i.msdn.microsoft.com/dynimg/IC477625.png" title="Supported by Portable Class Library" xmlns="" /><img id="storebag" alt="Supported in .NET for Windows Store apps" src="http://i.msdn.microsoft.com/dynimg/IC628630.png" title="Supported in .NET for Windows Store apps" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/9z9k5ydz(v=vs.110).aspx">WriteLine(String)</a></td><td><span>Writes a message followed by a line terminator to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/6hxb7kb9(v=vs.110).aspx">WriteLine(Object, String)</a></td><td><span>Writes a category name and the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;portable_library;Windows_store_apps;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="PortableClassLibrary" alt="Supported by Portable Class Library" src="http://i.msdn.microsoft.com/dynimg/IC477625.png" title="Supported by Portable Class Library" xmlns="" /><img id="storebag" alt="Supported in .NET for Windows Store apps" src="http://i.msdn.microsoft.com/dynimg/IC628630.png" title="Supported in .NET for Windows Store apps" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/cc190153(v=vs.110).aspx">WriteLine(String, <span xmlns=""></span>Object<span xmlns="">[]</span>)</a></td><td><span>Writes a formatted message followed by a line terminator to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/1w33ay0x(v=vs.110).aspx">WriteLine(String, String)</a></td><td><span>Writes a category name and message to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/5ya5d611(v=vs.110).aspx">WriteLineIf(Boolean, Object)</a></td><td><span>Writes the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr><tr data="public;static;declared;xnafw;portable_library;Windows_store_apps;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /><img id="PortableClassLibrary" alt="Supported by Portable Class Library" src="http://i.msdn.microsoft.com/dynimg/IC477625.png" title="Supported by Portable Class Library" xmlns="" /><img id="storebag" alt="Supported in .NET for Windows Store apps" src="http://i.msdn.microsoft.com/dynimg/IC628630.png" title="Supported in .NET for Windows Store apps" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/y94y4370(v=vs.110).aspx">WriteLineIf(Boolean, String)</a></td><td><span>Writes a message to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/12k5z2w9(v=vs.110).aspx">WriteLineIf(Boolean, Object, String)</a></td><td><span>Writes a category name and the value of the object's <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.object.tostring(v=vs.110).aspx">ToString</a></span> method to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr><tr data="public;static;declared;xnafw;"><td><img id="pubmethod" alt="Public method" src="http://i.msdn.microsoft.com/dynimg/IC91302.gif" title="Public method" xmlns="" /><img id="static" alt="Static member" src="http://i.msdn.microsoft.com/dynimg/IC130242.gif" title="Static member" xmlns="" /><img id="xna" alt="Supported by the XNA Framework" src="http://i.msdn.microsoft.com/dynimg/IC37116.gif" title="Supported by the XNA Framework" xmlns="" /></td><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/t797k8wt(v=vs.110).aspx">WriteLineIf(Boolean, String, String)</a></td><td><span>Writes a category name and message to the trace listeners in the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection if a condition is <span><span class="input">true</span></span>.</span></td></tr></table><a href="#mainBody">Top</a></div></div><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Remarks</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="remarksToggle"></a><p>If you use methods in the <span><span class="selflink">Debug</span></span> class to print debugging information and check your logic with assertions, you can make your code more robust without impacting the performance and code size of your shipping product.</p><p>This class provides methods to display an <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.assert(v=vs.110).aspx">Assert</a></span> dialog box, and to emit an assertion that will always fail. This class provides write methods in the following variations: <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.write(v=vs.110).aspx">Write</a></span>, <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.writeline(v=vs.110).aspx">WriteLine</a></span>, <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.writeif(v=vs.110).aspx">WriteIf</a></span> and <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.writelineif(v=vs.110).aspx">WriteLineIf</a></span>.</p><p>The <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.booleanswitch(v=vs.110).aspx">BooleanSwitch</a></span> and <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.traceswitch(v=vs.110).aspx">TraceSwitch</a></span> classes provide means to dynamically control the tracing output. You can modify the values of these switches without recompiling your application. For information on using the configuration file to set a switch, see the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.switch(v=vs.110).aspx">Switch</a></span> class and the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/3at424ac(v=vs.110).aspx">Trace Switches</a></span> topic.</p><p>You can customize the tracing output's target by adding <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.tracelistener(v=vs.110).aspx">TraceListener</a></span> instances to or removing instances from the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection. The <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection is shared by both the <span><span class="selflink">Debug</span></span> and the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.trace(v=vs.110).aspx">Trace</a></span> classes; adding a trace listener to either class adds the listener to both. By default, the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.defaulttracelistener(v=vs.110).aspx">DefaultTraceListener</a></span> class emits trace output.</p><div class="alert"><table><tr><th align="left"><img id="alert_note" alt="Note" src="http://i.msdn.microsoft.com/dynimg/IC101471.gif" title="Note" xmlns="" /><strong>Note</strong></th></tr><tr><td><p>Adding a trace listener to the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.listeners(v=vs.110).aspx">Listeners</a></span> collection can cause an exception to be thrown while tracing, if a resource used by the trace listener is not available. The conditions and the exception thrown depend on the trace listener and cannot be enumerated in this topic. It may be useful to place calls to the <span><span class="selflink">Debug</span></span> methods in <span><span class="input">try</span></span>/<span><span class="input">catch</span></span> blocks to detect and handle any exceptions from trace listeners.</p></td></tr></table></div><p>You can modify the level of indentation using the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indent(v=vs.110).aspx">Indent</a></span> method or the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indentlevel(v=vs.110).aspx">IndentLevel</a></span> property. To modify the indent spacing, use the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indentsize(v=vs.110).aspx">IndentSize</a></span> property. You can specify whether to automatically flush the output buffer after each write by setting the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.autoflush(v=vs.110).aspx">AutoFlush</a></span> property to <span><span class="input">true</span></span>.</p><p>To set the <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.autoflush(v=vs.110).aspx">AutoFlush</a></span> and <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indentsize(v=vs.110).aspx">IndentSize</a></span> for <span><span class="selflink">Debug</span></span>, you can edit the configuration file corresponding to the name of your application. The configuration file should be formatted as shown in the following example. </p>
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_894a0870-470a-4a3d-9b87-19bba2de6a09');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_894a0870-470a-4a3d-9b87-19bba2de6a09" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+&lt;configuration&gt;
+  &lt;system.diagnostics&gt;
+    &lt;trace autoflush="true" indentsize="7" /&gt;
+  &lt;/system.diagnostics&gt;
+&lt;/configuration&gt;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p>The <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.conditionalattribute(v=vs.110).aspx">ConditionalAttribute</a></span> attribute is applied to the methods of <span><span class="selflink">Debug</span></span>. Compilers that support <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.conditionalattribute(v=vs.110).aspx">ConditionalAttribute</a></span> ignore calls to these methods unless "DEBUG" is defined as a conditional compilation symbol. Refer to a compiler's documentation to determine whether <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.conditionalattribute(v=vs.110).aspx">ConditionalAttribute</a></span> is supported and the syntax for defining a conditional compilation symbol.</p><div class="alert"><table><tr><th align="left"><img id="alert_note" alt="Note" src="http://i.msdn.microsoft.com/dynimg/IC101471.gif" title="Note" xmlns="" /><strong>Note</strong></th></tr><tr><td><p>In Visual Studio C# and Visual Basic projects, by default, the "DEBUG" conditional compilation symbol is defined for debug builds, and the "TRACE" symbol is defined for both debug and release builds. For information about how to disable this behavior, see the Visual Studio documentation. For information about conditional debugging in Visual C++, see <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/ms235216(v=vs.110).aspx">Debug Class (C++/CLI)</a></span>.</p></td></tr></table></div><p>To define the "DEBUG" conditional compilation symbol in C#, add the <span><span class="input">/d:DEBUG</span></span> option to the compiler command line when you compile your code using a command line, or add <span><span class="input">#define DEBUG</span></span> to the top of your file. In Visual Basic, add the <span><span class="input">/d:DEBUG=True</span></span> option to the compiler command line or add <span><span class="input">#Const DEBUG=True</span></span> to the file. </p><div class="HxLinkTable"><table class="HxLinkTable"><thead><tr valign="top"><th>Topic</th><th>Location</th></tr></thead><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/sk36c28t(v=vs.85).aspx">How to: Create and Initialize Trace Listeners</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/64yxa344(v=vs.85).aspx">How to: Compile Conditionally with Trace and Debug</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/t06xyy08(v=vs.85).aspx">How to: Configure Trace Switches</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/6da106y8(v=vs.85).aspx">How to: Trace Code in an Application</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/zd83saa2(v=vs.85).aspx">How to: Add Trace Statements to Application Code</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/sk36c28t(v=vs.80).aspx">How to: Create and Initialize Trace Listeners</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/64yxa344(v=vs.80).aspx">How to: Compile Conditionally with Trace and Debug</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/t06xyy08(v=vs.80).aspx">How to: Configure Trace Switches</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/6da106y8(v=vs.80).aspx">How to: Trace Code in an Application</a></td><td>.NET Framework: Debugging</td></tr><tr valign="top"><td><a href="http://msdn.microsoft.com/en-us/library/vstudio/zd83saa2(v=vs.80).aspx">How to: Add Trace Statements to Application Code</a></td><td>.NET Framework: Debugging</td></tr></table></div></div></div><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Examples</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="exampleToggle"></a><p>The following example uses <span><span class="selflink">Debug</span></span> to indicate the beginning and end of a program's execution. The example also uses <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.indent(v=vs.110).aspx">Indent</a></span> and <span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.debug.unindent(v=vs.110).aspx">Unindent</a></span> to distinguish the tracing output.</p><div>
+<div id="code-snippet-3" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabActive" dir="ltr"><a>C#</a></div><div class="codeSnippetContainerTab" dir="ltr"><a href="http://msdn.microsoft.com/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.110).aspx?cs-save-lang=1&amp;cs-lang=cpp#code-snippet-3">C++</a></div><div class="codeSnippetContainerTab" dir="ltr"><a href="http://msdn.microsoft.com/en-us/library/vstudio/System.Diagnostics.Debug(v=vs.110).aspx?cs-save-lang=1&amp;cs-lang=vb#code-snippet-3">VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_61d7a210-2c45-40b9-9ffc-7667ad426ca9');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_61d7a210-2c45-40b9-9ffc-7667ad426ca9" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Green;">// Specify /d:DEBUG when compiling. </span>
+
+<span style="color:Blue;">using</span> System;
+<span style="color:Blue;">using</span> System.Data;
+<span style="color:Blue;">using</span> System.Diagnostics;
+
+<span style="color:Blue;">class</span> Test
+{
+    <span style="color:Blue;">static</span> <span style="color:Blue;">void</span> Main()
+    {
+       Debug.Listeners.Add(<span style="color:Blue;">new</span> TextWriterTraceListener(Console.Out));
+       Debug.AutoFlush = <span style="color:Blue;">true</span>;
+       Debug.Indent();
+       Debug.WriteLine(<span style="color:#A31515;">"Entering Main"</span>);
+       Console.WriteLine(<span style="color:#A31515;">"Hello World."</span>);
+       Debug.WriteLine(<span style="color:#A31515;">"Exiting Main"</span>); 
+       Debug.Unindent();
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></div></div><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Version Information</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="versionsTitleToggle"></a><h4 class="subHeading">.NET Framework</h4>Supported in: 4.5.1, 4.5, 4, 3.5, 3.0, 2.0, 1.1, 1.0<br /><h4 class="subHeading">.NET Framework Client Profile</h4>Supported in: 4, 3.5 SP1<br /><h4 class="subHeading">Portable Class Library</h4>Supported in: Portable Class Library<br /><h4 class="subHeading">.NET for Windows Store apps</h4>Supported in: Windows 8<br /><h4 class="subHeading">.NET for Windows Phone apps</h4>Supported in: Windows Phone 8.1, Windows Phone 8, Silverlight 8.1<br /></div></div><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Platforms</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="platformsTitleToggle"></a><p>Windows Phone 8.1, Windows Phone 8, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Vista SP2, Windows Server 2008 (Server Core Role not supported), Windows Server 2008 R2 (Server Core Role supported with SP1 or later; Itanium not supported)</p><p>  <span>
+		  The .NET Framework does not support all versions of every platform. For a list of the supported versions, see <a href="http://msdn.microsoft.com/en-us/library/vstudio/8z6watww(v=vs.110).aspx">.NET Framework System Requirements</a>.
+	  </span> </p></div></div><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Thread Safety</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="threadSafetyToggle"></a><p>This type is thread safe. </p></div></div><div><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">See Also</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></div><div class="sectionblock"><a id="seeAlsoToggle"></a><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics(v=vs.110).aspx">System.Diagnostics Namespace</a></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.trace(v=vs.110).aspx">Trace</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.switch(v=vs.110).aspx">Switch</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.booleanswitch(v=vs.110).aspx">BooleanSwitch</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.traceswitch(v=vs.110).aspx">TraceSwitch</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.tracelistener(v=vs.110).aspx">TraceListener</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.defaulttracelistener(v=vs.110).aspx">DefaultTraceListener</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.consoletracelistener(v=vs.110).aspx">ConsoleTraceListener</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.eventlogtracelistener(v=vs.110).aspx">EventLogTraceListener</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.tracelistenercollection(v=vs.110).aspx">TraceListenerCollection</a></span></div><div class="seeAlsoStyle"><span><a href="http://msdn.microsoft.com/en-us/library/vstudio/system.diagnostics.conditionalattribute(v=vs.110).aspx">ConditionalAttribute</a></span></div></div></div></div>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="feedbackContainer">
+        <div id="feedbackSection1" class="clear">
+            <div class="left">Did you find this helpful?</div>
+            <div class="left">
+                <div class="left">
+                    <input type="radio" name="feedback" id="feedbackYes" value="1" class="feedbackYesClick" data-enhance="false" /><label class="feedbackYesClick" for="feedbackYes"> Yes</label>
+                </div>
+                <div class="left">
+                    <input type="radio" name="feedback" id="feedbackNo" value="0" class="feedbackNoClick" data-enhance="false" /><label class="feedbackNoClick" for="feedbackNo"> No</label>
+                </div>
+            </div>
+            <a class="rateThisAnchor" name="feedback"></a>
+        </div>
+        <div id="feedbackSection2" class="clear">
+        </div>
+        <div id="feedbackSection3" class="clear">
+                    <div>
+                        <input id="checkboxNo201" name="chkbxNo" type="checkbox" value="201" data-enhance="false" />
+                        <label for="checkboxNo201">Not accurate</label>
+                    </div>
+                    <div>
+                        <input id="checkboxNo202" name="chkbxNo" type="checkbox" value="202" data-enhance="false" />
+                        <label for="checkboxNo202">Not enough depth</label>
+                    </div>
+                    <div>
+                        <input id="checkboxNo203" name="chkbxNo" type="checkbox" value="203" data-enhance="false" />
+                        <label for="checkboxNo203">Need more code examples</label>
+                    </div>
+        </div>
+        <div id="feedbackSection4" class="clear">
+            <div>
+                <textarea id="feedbackTextArea" name="feedbackText" class="TellUsMoreTextBoxSearchLoaded" data-enhance="false">Tell us more...</textarea>
+            </div>
+            <div class="left"><span class="counter">(<span id="feedbackTextCounter">1500</span> characters remaining)</span></div>
+            <div class="right">
+                <button type="button" id="feedbackSubmit" title="Click to Submit Feedback" data-enhance="false">Submit</button>
+            </div>
+        </div>
+        <div id="feedbackSection5">Thank you for your feedback</div>
+        <input id="feedbackValue" type="hidden" value="" />
+        <input id="tellUsMoreText" type="hidden" value="Tell us more..." />
+        <input id="maxTextBoxCharacters" type="hidden" value="1500" />
+        <input type="hidden" id="submitUrl" value="/en-us/library/vstudio/feedback/add/System.Diagnostics.Debug(v=vs.110).aspx" />
+        <input type="hidden" id="feedbackSiteName" name="feedbackSiteName" value="" />
+        <input type="hidden" id="feedbackPriority" name="feedbackPriority" value="" />
+        <input type="hidden" id="feedbackSourceUrl" name="feedbackSourceUrl" value="" />
+        <input type="hidden" id="ClientIP" name="ClientIP" value="" />
+        <input type="hidden" id="ClientOS" name="ClientOS" value="" />
+        <input type="hidden" id="ClientBrowser" name="ClientBrowser" value="" />
+        <input type="hidden" id="ClientTime" name="ClientTime" value="" />
+        <input type="hidden" id="ClientDate" name="ClientDate" value="" />
+    </div>
+    
+    
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>Show:</span>
+        <label>
+            <input type="checkbox" class="libraryFilterInherited" checked="checked" value="Inherit" />Inherited
+        </label>
+        <label>
+            <input type="checkbox" class="libraryFilterProtected" checked="checked" value="Protected" />Protected
+        </label>
+    </div>
+</div>
+    
+<input type="hidden" id="libraryMemberFilterEmptyWarning" value="There are no members available with your current filter settings." />
+
+
+ 
+</div>
+
+            </div>
+            <div class="clear"></div>
+        
+            
+    
+<input name="__RequestVerificationToken" type="hidden" value="fo0zvQxzWe5SXxWo5IwoCMll0G-JENHb1wJHy29-ewu4XQnvnzResdy66gKXnBMFkswpEoH6cTDeqEds29rWPsdWQm81" />
+<input id="ratingSubmitUrl" type="hidden" value="http://msdn.microsoft.com/en-us/library/feedback/add/System.Diagnostics.Debug(v=vs.110).aspx" />
+<input id="isTopicRated" type="hidden" value="false" />
+
+
+
+
+    
+<footer class="ux-footer">
+  <div class="nav">
+    <div class="footerLinksContainer"> 
+          <ul class="footerLinks" style="width: 16.66%;">
+            <li class="footerLinksTitle">
+              <a href="http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx" title="Home">Home</a>
+            </li>
+
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx" title="Welcome">Welcome</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/cc136611.aspx" title="Visual Studio">Visual Studio</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/ff637362.aspx" title="Team Foundation Server">Team Foundation Server</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/aa496123.aspx" title=".NET Framework">.NET Framework</a>
+                </li>
+          </ul>
+          <ul class="footerLinks" style="width: 16.66%;">
+            <li class="footerLinksTitle">
+              <a href="http://code.msdn.microsoft.com/vstudio" title="Samples">Samples</a>
+            </li>
+
+          </ul>
+          <ul class="footerLinks" style="width: 16.66%;">
+            <li class="footerLinksTitle">
+              <a href="http://msdn.microsoft.com/en-us/vstudio/jj672990.aspx" title="Languages">Languages</a>
+            </li>
+
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/jj672990.aspx" title="Overview">Overview</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh386302.aspx" title="Visual C++">Visual C++</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh341490.aspx" title="Visual C#">Visual C#</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh388573.aspx" title="Visual Basic">Visual Basic</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/jj673959.aspx" title="JavaScript">JavaScript</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh388569.aspx" title="Visual F#">Visual F#</a>
+                </li>
+          </ul>
+          <ul class="footerLinks" style="width: 16.66%;">
+            <li class="footerLinksTitle">
+              <a href="http://visualstudiogallery.msdn.microsoft.com/" title="Extensions">Extensions</a>
+            </li>
+
+          </ul>
+          <ul class="footerLinks" style="width: 16.66%;">
+            <li class="footerLinksTitle">
+              <a href="http://msdn.microsoft.com/en-us/library/vstudio" title="Documentation">Documentation</a>
+            </li>
+
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/library/vstudio/dd831853(v=vs.120).aspx" title="Visual Studio">Visual Studio</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/library/vstudio/fda2bad5(v=vs.120).aspx" title="Team Foundation Server ALM">Team Foundation Server ALM</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/library/vstudio/w0x726c2.aspx" title=".NET Framework">.NET Framework</a>
+                </li>
+          </ul>
+          <ul class="footerLinks" style="width: 16.66%;">
+            <li class="footerLinksTitle">
+              <a href="http://social.msdn.microsoft.com/forums/vstudio/en-us/home?category=visualstudio%2cvslanguages%2cvstfs%2cnetdevelopment%2cvsarch" title="Forums">Forums</a>
+            </li>
+
+          </ul>
+    </div>
+    </div>
+  <div class="footerSubLinksContainer">
+    <span class="localePickerLink"><a href="http://msdn.microsoft.com/en-us/vstudio/SelectLocale?fromPage=%2flibrary%2fvstudio%2fSystem.Diagnostics.Debug" title=" United States (English)"> United States (English)</a></span>
+    <ul class="footerSubLinks">
+      <li class="subFooterLink">© 2014 Microsoft</li>
+          <li class="subFooterLink">
+            <a href="http://msdn.microsoft.com/cc300389.aspx" title="Terms of Use">Terms of Use</a>
+          </li>
+          <li class="subFooterLink">
+            <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx" title="Trademarks">Trademarks</a>
+          </li>
+          <li class="subFooterLink">
+            <a href="http://go.microsoft.com/fwlink/?linkid=248681" title="Privacy Statement">Privacy Statement</a>
+          </li>
+          <li class="subFooterLink">
+            <a href="https://lab.msdn.microsoft.com/mailform/contactus.aspx?refurl=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2fvstudio%2faa718325.aspx&amp;amp;loc=en-us" title="Site Feedback">Site Feedback</a>
+          </li>
+      <li>
+        <a class="microsoftlogo" href="http://www.microsoft.com" title="Microsoft"></a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+            <div class="footerPrintView">
+                <div class="footerCopyrightPrintView">© 2014 Microsoft. All rights reserved.</div>
+            </div>
+
+            
+            
+
+        
+            <input id="MtpsDevice" type="hidden" value="Default" />
+
+
+<![CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]>
+        
+            
+            
+            
+            
+            
+        
+
+
+
+
+
+<noscript><div><img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" /></div></noscript>
+
+
+
+
+
+
+
+
+
+<noscript>
+  <a href="http://www.omniture.com" title="Web Analytics">
+    <img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" />
+  </a>
+</noscript>
+
+
+
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="oJ3xVfLc0UGiw-UAOXt69zd9SQc8hM2v8Emoi5kxnDBl5skCifQjlOMa3TIk6QJJ1W1AvubhGLi4_YXuitp6vcr_QQg1" />
+</div>
+
+
+        </div>
+        
+        
+        
+    <script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"http://i.msdn.microsoft.com\", \r\n\t\"js\": \"http://i2.msdn.microsoft.com\", \r\n\t\"css\": \"http://i3.msdn.microsoft.com\"\r\n});\r\n/**/" },
+	{ url: "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js" },
+	{ txt: "//\n  var literalNormalizedUrl = \u0027/en-us/library/vstudio/6x31ezs1(d=default,l=en-us,v=vs.110).aspx\u0027;\n  var wt_nvr_ru = \u0027WT_NVR_RU\u0027;\n  var wt_fpcdom = \u0027.microsoft.com\u0027;\n  var wt_domlist = \u0027msdn.microsoft.com\u0027;\n  var wt_pathlist = \u0027\u0027;\n  var wt_paramlist = \u0027DCSext.mtps_devcenter\u0027;\n  var wt_siteid = \u0027MSDN\u0027;\n  var gDomain = \u0027m.webtrends.com\u0027;\n  var gDcsId = \u0027dcsmgru7m99k7mqmgrhudo0k8_8c6m\u0027;\n  var gFpc = \u0027WT_FPC\u0027;\n\n\n\n  if (document.cookie.indexOf(gFpc + \"=\") == -1) {\n    var wtidJs = document.createElement(\"script\");\n    wtidJs.src = \"//\" + gDomain + \"/\" + gDcsId + \"/wtid.js\";\n    document.getElementsByTagName(\"head\")[0].appendChild(wtidJs);\n  }\n\n\n\n  var detectedLocale = \u0027en-us\u0027;\n  var wtsp = \u0027_msdn_\u0027;\n  var gTrackEvents = \u00270\u0027;\n/**/" },
+	{ txt: "/**/\n  var omni_guid = \"78f89fa6-90c6-4774-a29a-037755cc9505\";\n/**/" },
+	{ txt: "//\n\n            window.appInsightsId = \u002760854590-027a-4ae4-98be-2741a40f355f\u0027;\n            //" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:Utilities,0:Topic,1:webtrendsscript,2:omni_rsid_MSDN,0:AppInsightsPerf;/Areas/Epx/Content/Scripts:0,/Areas/Global/Content/Webtrends/resources:1,/Areas/Global/Content/Omniture/resources/MSDN:2\u0026amp;hashKey=4DEB30FD19C1A2FE95EE3D342CA34683" },
+	{ txt: "//\n    var searchWidgetJsUri = \u0027http://i2.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026brand=MSDN\u0026loc=en-us\u0026Refinement=195\u0026watermark=Visual%20Studio\u0026focusOnInit=false\u0026iroot=vstudio\u0027;\n  //" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:search.2,1:Toc,1:NavigationResize,2:FeedbackCounter;/Areas/Epx/Themes/VStudio/Content:0,/Areas/Library/Content:1,/Areas/Epx/Shared/Content:2\u0026amp;hashKey=0580D64EE6A701BE7157099BA553CCEE" },
+	{ txt: "MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = \u0027Expand\u0027; MTPS.LocalizedStrings.CollapseButtonTooltip = \u0027Collapse\u0027; MTPS.LocalizedStrings.EnhancedExpandTooltip = \u0027Click to expand. Double-click to expand all.\u0027; MTPS.LocalizedStrings.EnhancedCollapseTooltip = \u0027Click to collapse. Double-click to collapse all.\u0027; MTPS.LocalizedStrings.ExpandAllButtonTooltip = \u0027Expand All\u0027; MTPS.LocalizedStrings.CollapseAllButtonTooltip = \u0027Collapse All\u0027;" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:Feedback,1:LibraryMemberFilter,2:CodeSnippet,2:TopicNotInScope,2:CollapsibleArea,2:VersionSelector,2:SurveyBroker;/Areas/Epx/Shared/Content:0,/Areas/Library/Content:1,/Areas/Epx/Content/Scripts:2\u0026amp;hashKey=1BA3FDEC83D86739A60971EFD7DEB0D3" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script></body>
+</html>
